@@ -29,8 +29,12 @@ public class BeersTest {
         assertEquals("Good", beers.getDetailsName());
     }
 
-//    @Test
-//    public void
+    @Test
+    public void AllBeersAreCorrectlyReturned_true() {
+        Beers beers = new Beers("Good","IPA", "Glass","A", "It was alright.");
+        Beers otherBeers = new Beers("OK","Porter", "Can","B+", "Yum.");
+        assertEquals(2, Beers.getAll().size());
+    }
 
 
 }

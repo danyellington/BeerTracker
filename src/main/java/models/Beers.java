@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Beers {
     private ArrayList<String> beerDetails = new ArrayList<>();
+    private static ArrayList<ArrayList<String>> instances = new ArrayList<>();
     private String name;
     private String type;
     private String container;
@@ -24,10 +25,15 @@ public class Beers {
         beerDetails.add(this.container);
         beerDetails.add(this.rating);
         beerDetails.add(this.notes);
+        instances.add(this.beerDetails);
     }
 
     public String getDetailsName() {
         return beerDetails.get(0);
+    }
+
+    public static ArrayList<ArrayList<String>> getAll() {
+        return null;
     }
 
 }
