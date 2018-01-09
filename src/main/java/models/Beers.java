@@ -33,7 +33,7 @@ public class Beers {
     }
 
     public static ArrayList<ArrayList<String>> getAll() {
-        return null;
+        return instances;
     }
 
 }
