@@ -9,6 +9,6 @@ public class Beers {
     }
 
     public String getContent() {
-        return null;
+        return content;
     }
 }
