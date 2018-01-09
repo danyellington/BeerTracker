@@ -1,0 +1,42 @@
+{{#partial "content"}}
+
+<h1>Beer list</h1>
+
+{{#if beers}}
+{{#each beers }}
+<p></p>
+<p>{{ name }}</p>
+<!--<p>{{ beerDetails }}</p>-->
+<!--<p>{{ container }}</p>-->
+<!--<p>{{ rating }}</p>-->
+<!--<p>{{ notes }}</p>-->
+{{/each}}
+{{else}}
+<p>No Beers</p>
+{{/if}}
+
+
+<p>Add a new Beer:</p>
+
+<form action="/beers/new" method="POST">
+    <label for="name">Beer Name</label>
+    <input id="name" name="name" type="text">
+
+    <label for="type">Beer Type</label>
+    <input id="type" name="type" type="text">
+
+    <label for="container">How was your beer served?</label>
+    <input id="container" name="container" type="text">
+
+    <label for="rating">Beer Rating</label>
+    <input id="rating" name="rating" type="text">
+
+    <label for="notes">Beer Notes</label>
+    <input id="notes" name="notes" type="text">
+
+    <button type="submit" class="btn btn-default">Add Beer</button>
+
+</form>
+{{/partial}}
+
+{{> layout.hbs}}

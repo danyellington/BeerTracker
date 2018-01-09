@@ -36,4 +36,8 @@ public class Beers {
         return instances;
     }
 
+//    public static String getElement() {
+//        return instances.beerDetails(0).get(0);
+//    }
+
 }
