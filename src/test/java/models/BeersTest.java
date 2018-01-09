@@ -19,15 +19,18 @@ public class BeersTest {
 
     @Test
     public void instantiatesBeer_true() throws Exception {
-        Beers beers = new Beers("thirsty");
+        Beers beers = new Beers("Good","IPA", "Glass","A", "It was alright.");
         assertEquals(true, beers instanceof Beers);
     }
 
     @Test
     public void BeersInstantiateWithContent() throws Exception {
-        Beers beers = new Beers("thirsty");
-        assertEquals("thirsty", beers.getContent());
+        Beers beers = new Beers("Good","IPA", "Glass","A", "It was alright.");
+        assertEquals("Good", beers.getDetailsName());
     }
+
+//    @Test
+//    public void
 
 
 }
