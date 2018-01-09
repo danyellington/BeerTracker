@@ -22,4 +22,12 @@ public class BeersTest {
         Beers beers = new Beers("thirsty");
         assertEquals(true, beers instanceof Beers);
     }
+
+    @Test
+    public void BeersInstantiateWithContent() throws Exception {
+        Beers beers = new Beers("thirsty");
+        assertEquals("thirsty", beers.getContent());
+    }
+
+
 }
