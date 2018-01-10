@@ -26,7 +26,7 @@ public class BeersTest {
     @Test
     public void BeersInstantiateWithContent() throws Exception {
         Beers beers = new Beers("Good","IPA", "Glass","A", "It was alright.");
-        assertEquals("Good", beers.getDetailsName());
+        assertEquals("Good", beers.getName());
     }
 
     @Test

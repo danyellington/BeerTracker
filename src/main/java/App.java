@@ -1,4 +1,5 @@
 import models.Beers;
+import java.lang.reflect.Array;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -11,15 +12,15 @@ public class App {
     public static void main(String[] args) {
         staticFileLocation("/public");
 
-        get("/", (request, response) -> {
+        get("/", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
-            ArrayList<ArrayList<String>> beers = Beers.getAll();
+            ArrayList<Beers> beers = Beers.getAll();
             model.put("beers", beers);
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
 
         post("/beers/new", (request, response) ->  {
-            Map<String, Object> model = new HashMap<String, Object>();
+            Map<String, Object> model = new HashMap<>();
             String name = request.queryParams("name");
             String type = request.queryParams("type");
             String container = request.queryParams("container");
@@ -27,11 +28,11 @@ public class App {
             String notes = request.queryParams("notes");
 
             Beers newBeers = new Beers(name, type, container, rating, notes);
-            model.put("name", name);
-            model.put("type", type);
-            model.put("container", container);
-            model.put("rating", rating);
-            model.put("notes", notes);
+//            model.put("beers", newBeers);
+//            model.put("type", newBeers);
+//            model.put("container", newBeers);
+//            model.put("rating", newBeers);
+//            model.put("notes", newBeers);
             return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
 

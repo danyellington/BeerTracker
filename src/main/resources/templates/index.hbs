@@ -2,14 +2,14 @@
 
 <h1>Beer list</h1>
 
-{{#if beers}}
-{{#each beers }}
-<p></p>
-<p>{{ name }}</p>
-<!--<p>{{ beerDetails }}</p>-->
-<!--<p>{{ container }}</p>-->
-<!--<p>{{ rating }}</p>-->
-<!--<p>{{ notes }}</p>-->
+{{#if beers }}
+{{#each beers}}
+
+<p>{{name}}</p>
+<p>{{type}}</p>
+<p>{{container}}</p>
+<p>{{rating}}</p>
+<p>{{notes}}</p>
 {{/each}}
 {{else}}
 <p>No Beers</p>
@@ -18,7 +18,7 @@
 
 <p>Add a new Beer:</p>
 
-<form action="/beers/new" method="POST">
+<form action="/beers/new" method="post">
     <label for="name">Beer Name</label>
     <input id="name" name="name" type="text">
 
